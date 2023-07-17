@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
+        <div class="header">
         <h1>Maintence Log</h1>
             <b>Honda Pilot 2007 ExL</b>  
-
+        </div>
             <form name="submit-to-google-sheet">
+              <!--DATA-->
                     <label for="">Date</label>
-                    <input type="month" name="Date">
+                    <input type="date" name="Date">
+              <!--MILEAGE-->
 
                     <label for="">Mileage</label>
                     <input type="number" name="Mileage">
 
-                    <label for="">Discription</label>
+              <!--DISCRIPTION-->
+                    <label for="Dis">Discription</label>
                     <input type="text" name="Discription">
-
-
-                    <input type="submit" value="submit" name="submit">         
+              <!--SUBMIT BUTTON-->
+                    <input id="submit" type="submit" value="submit" name="submit">         
+                    <span id="success"> </span>
                 </form>
 
-             
+             <div class="log">
+              <a href="https://docs.google.com/spreadsheets/d/1YAN2-XAo0oKDDBzjO5AIPR0XLhmM7tVlTM7vXzM9N5c/edit?usp=sharing">Excel Log</a>
+             </div>
         
                   <script>
                     const scriptURL = 'https://script.google.com/macros/s/AKfycbyU5izExxVSWew_P-EXn0B-LM9C699xL23wVE_d_uKPII2c20yC7rAIDnczh8mUfh2b/exec'
                     const form = document.forms['submit-to-google-sheet']
-                  
+                    const success = document.getElementById("success");
                     form.addEventListener('submit', e => {
                       e.preventDefault()
                       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                        .then(response => console.log('Success!', response))
+                        .then(response =>{
+                            success.innerHTML="Succesfully Submitted !"
+                        })
                         .catch(error => console.error('Error!', error.message))
                     })
                   </script>
