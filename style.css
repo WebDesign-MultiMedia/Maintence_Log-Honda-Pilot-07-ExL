@@ -1,15 +1,32 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body{
-        background-color: #0E0E52;
+        background-color: #ffffff;
+    }
+
+
+    .BackIMG{
+        position: fixed;
+    }
+
+    .imgs{
+        position: absolute;
+        height: auto;
+        width:70px;
     }
 
     /* HEADER*/
         .header{
             text-align: center;
+            font-family: "Satisfy", cursive;
+            font-weight: 400;
         }
         .header, h1, b{
-            color: #d3c618;
+            color: #0018ee;
+            font-size: 8vw;
+            font-family: "Sedan", serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
 
@@ -22,35 +39,61 @@
         padding: 90px;
         position: relative;
         bottom: 70px;
+
+        font-family: "Urbanist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+
+        
     }
 
     form label{
-        color: white;
+        color: rgb(24, 38, 236);
         text-align: center;
-        font-size: 1.3em;
+        font-size: 6vw;
+        padding-top: 20px;
     }
 
     #submit{
         position: relative;
-        top: 20px;
-        background-color: yellow;
-        width: 50%;
+        top: 90px;
+        background-color: rgb(11, 55, 227);
+        color: white;
+        width: 100%;
         height: 50px;
         border-radius: 10px;
+        font-family: "Sedan", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 6vw;
+
     }
+   
+    
     #submit:hover{
-        background-color: rgb(180, 180, 51);
-        color: white;
+        background-color: rgb(245, 245, 23);
+        color: rgb(0, 0, 0);
     }
+
+
 
     /* Excel Link */
-   .log, a{
+
+     
+     details summary {
+        position: relative;
+        padding-left: 25%;
         color: red;
-        text-decoration: none;
-        text-align: left;
-        
      }
 
+     details a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        position: relative;
+        padding-left: 40%;
+        top: 3vw;
+     }
 
 
 }
@@ -58,6 +101,6 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body{
-        background-color: blue;
+        display: none;
     }
 }

@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Satisfy&family=Sedan:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+
+<div class="BackIMG">
+  <img class="imgs" src="HondaLogo.png" alt="Logo">
+</div>
 
         <div class="header">
         <h1>Maintence Log</h1>
@@ -25,13 +33,17 @@
                     <label for="Dis">Discription</label>
                     <input type="text" name="Discription">
               <!--SUBMIT BUTTON-->
-                    <input id="submit" type="submit" value="submit" name="submit">         
+                    <input id="submit" type="submit" value="Submit" name="submit">         
                     <span id="success"> </span>
                 </form>
 
-             <div class="log">
-              <a href="https://docs.google.com/spreadsheets/d/1YAN2-XAo0oKDDBzjO5AIPR0XLhmM7tVlTM7vXzM9N5c/edit?usp=sharing">Excel Log</a>
+                  <details>
+                    <summary>Google Sheet Log Info...</summary>    <div class="log">
+              <a href="https://docs.google.com/spreadsheets/d/1YAN2
+              -XAo0oKDDBzjO5AIPR0XLhmM7tVlTM7vXzM9N5c/edit?usp=sharing">Excel Log</a>
              </div>
+                  </details>
+         
         
         
                   <script>
@@ -46,6 +58,11 @@
                         })
                         .catch(error => console.error('Error!', error.message))
                     })
+
+                    function changeColor(){
+                      var success = document.getElementById("success");
+                      success.style.color = "green";
+                    }
                   </script>
 
 
